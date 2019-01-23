@@ -6,61 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/usr_firstname"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myrecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:ems="20"
-        android:hint="First Name" />
+        android:layout_height="match_parent">
 
-
-    <EditText
-        android:id="@+id/usr_lastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/usr_firstname"
-        android:layout_centerHorizontal="true"
-        android:ems="20"
-        android:hint="Last Name" />
-
-    <EditText
-        android:id="@+id/usr_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/usr_lastname"
-        android:layout_centerHorizontal="true"
-        android:ems="20"
-        android:hint="age" />
-
-    <LinearLayout
-        android:id="@+id/button_ui"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/usr_age"
-        android:layout_centerHorizontal="true">
-
-        <Button
-            android:id="@+id/savedata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save" />
-
-        <Button
-            android:id="@+id/viewdata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/usr_age"
-            android:text="View" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/user_data"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/button_ui"
-        android:layout_marginTop="50dp"
-        android:hint="No User data" />
-
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
