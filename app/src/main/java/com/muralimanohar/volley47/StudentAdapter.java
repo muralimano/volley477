@@ -22,35 +22,34 @@ import java.util.List;
  */
 public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
 
-    Context mCtx;
-    List<Studendconstant> studendconstantslist;
+    Context mCxt;
+    List<Studendconstant> studentlist;
 
-    public StudentAdapter(Context mCtx, List<Studendconstant> studendconstantslist) {
-        this.mCtx = mCtx;
-        this.studendconstantslist = studendconstantslist;
+    public StudentAdapter(Context mCxt, List<Studendconstant> studentlist) {
+        this.mCxt = mCxt;
+        this.studentlist = studentlist;
     }
 
     @NonNull
-
     @Override
     public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater layoutInflater = LayoutInflater.from(mCtx);
-        View view = layoutInflater.inflate(R.layout.list_layout, null);
+        LayoutInflater inflater = LayoutInflater.from(mCxt);
+        View view = inflater.inflate(R.layout.list_layout, null);
         return new StudentViewHolder(view);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull StudentViewHolder holder, int i) {
-        Studendconstant studendconstant = studendconstantslist.get(i);
-        holder.firstname.setText(studendconstant.getFirstname());
-        holder.lastname.setText(studendconstant.getSecondname());
-        holder.age.setText(studendconstant.getAge());
-
+    Studendconstant studendconstant = studentlist.get(i);
+    holder.firstname.setText(studendconstant.getFirstname());
+    holder.lastname.setText(studendconstant.getSecondname());
+    holder.age.setText(studendconstant.getAge());
     }
 
     @Override
     public int getItemCount() {
-        return studendconstantslist.size();
+        return studentlist.size();
     }
 
     class StudentViewHolder extends RecyclerView.ViewHolder {
@@ -63,4 +62,6 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
             age = itemView.findViewById(R.id.list_age);
         }
     }
+
 }
+
